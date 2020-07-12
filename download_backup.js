@@ -24,7 +24,7 @@ const urls = {
 
 const download = async () => {
 
-    console.log("Opening browser...")
+    console.log("Opening headless browser...")
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     try {
@@ -36,7 +36,7 @@ const download = async () => {
         console.log("Navigating to Roam Research...")
         await page.goto(urls.authenticate)
 
-        console.log("Logging into Roam...")
+        console.log("Authenticating to Roam Research...")
 
         await page.waitFor(selectors.email)
         await page.focus(selectors.email)
@@ -53,7 +53,7 @@ const download = async () => {
         console.log("Navigating to database...")
         await page.goto(urls.database)
 
-        console.log("Exporting data...")
+        console.log("Exporting database...")
         await page.waitFor(selectors.menu)
         await page.click(selectors.menu)
 
@@ -63,7 +63,7 @@ const download = async () => {
         await page.waitFor(selectors.exportButton)
         await page.click(selectors.exportButton)
 
-        console.log("Waiting 30 seconds for the backup to download...")
+        console.log("Waiting 30 seconds for the download to complete...")
         await page.waitFor(30 * SECOND)
     } catch (err) {
         console.error("Something went wrong!")
