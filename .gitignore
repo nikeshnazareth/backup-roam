@@ -6,3 +6,6 @@ node_modules
 
 # Webstorm IDE
 .idea
+
+# Ignore the backup directory in this public repository
+notes
