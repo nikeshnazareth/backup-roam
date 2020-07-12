@@ -4,7 +4,7 @@
   "description": "Backup a RoamResearch database",
   "main": "index.js",
   "scripts": {
-    "backup": "node backup.js",
+    "download": "node download_backup.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nikesh Nazareth",

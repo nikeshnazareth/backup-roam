@@ -22,7 +22,7 @@ const urls = {
     'database': `https://roamresearch.com/#/app/${process.env.ROAM_DATABASE}`
 }
 
-const backup = async () => {
+const download = async () => {
 
     console.log("Opening browser...")
     const browser = await puppeteer.launch()
@@ -76,5 +76,5 @@ const backup = async () => {
     await browser.close()
 }
 
-backup()
+download()
 
