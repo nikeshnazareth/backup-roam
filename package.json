@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "download": "node download_backup.js",
+    "backup": "npm run download && ./sync_backup.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nikesh Nazareth",
