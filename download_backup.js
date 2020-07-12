@@ -65,8 +65,6 @@ const download = async () => {
 
         console.log("Waiting 30 seconds for the backup to download...")
         await page.waitFor(30 * SECOND)
-        await page.screenshot({ path: "logged_in.png" })
-
     } catch (err) {
         console.error("Something went wrong!")
         console.error(err)
