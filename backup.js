@@ -19,7 +19,7 @@ const selectors = {
 
 const urls = {
     'authenticate': 'https://roamresearch.com/#/signin',
-    'database': 'https://roamresearch.com/#/app/exceed_silence'
+    'database': `https://roamresearch.com/#/app/${process.env.ROAM_DATABASE}`
 }
 
 const backup = async () => {
